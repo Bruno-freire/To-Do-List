@@ -9,6 +9,8 @@ require('./config/database')
 const app = express();
 app.use(express.json());
 
+app.use(express.static(path.join(__dirname,'public')))
+
 app.set('views', path.join(__dirname, 'src/views'))
 app.set('view engine', 'ejs')
 
@@ -23,14 +25,6 @@ const log = (req,res, next) => {
 }
 
 app.use(log);
-
-app.get('/', (req, res) => {
-  res.send('<h1>Minha lista de tarefas :)</h1>');
-})
-
-app.get('/json', (req,res) => {
-  res.send({title: 'Tarefa X', done: true})
-})
 
 app.listen(3000, () => {
   console.log('Servidor iniciado');
