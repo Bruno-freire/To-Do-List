@@ -6,13 +6,11 @@ This is an application project to manage task lists, developed using Node.js and
 
 To use the project, you need to have Node.js and MongoDB installed on your computer. After cloning the repository, run the following command to install the dependencies:
 
-npm install
+        npm install
 
 Then run the following command to launch the application:
 
-sql
-
-npm start
+        npm start
 
 The application will start on port 3000.
 
